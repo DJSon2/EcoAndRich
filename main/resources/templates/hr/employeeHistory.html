@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org"><!-- 타임리프 활용하기(네임스키마 문법 추가) -->
+<head>
+<meta charset="UTF-8">		
+<title>Insert title here</title>
+</head>
+<body>
+		<div th:replace="common/header.html"></div>
+
+	<table align="center" border="1" style="border-collapse:collapse; width: 50%; text-align: center;">
+		<tr style="background-color: #333; color: #fff;">
+			<th style="padding: 10px;">아이디</th>
+			<th style="padding: 10px;">직업 ID</th>
+			<th style="padding: 10px;">입사일</th>
+			<th style="padding: 10px;">퇴사일</th>
+		</tr>
+		<tr>
+		  <td th:text="${ employeeId }" style="padding: 10px;"></td>
+		  <td th:text="${ jobId }" style="padding: 10px;"></td>
+		  <td th:text="${ startDate }" style="padding: 10px;"></td>
+		  <td th:text="${ endDate }" style="padding: 10px;"></td>
+		</tr>
+	</table>
+
+	<script>
+		const successMessage = "[[${ modifySuccessMessage }]]";
+		successMessage && alert(successMessage);
+		
+	</script>
+</body>
+</html>

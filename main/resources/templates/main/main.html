@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org"><!-- 타임리프 활용하기(네임스키마 문법 추가) -->
+<head>
+<meta charset="UTF-8">		
+	<title>Insert title here</title>
+	  <style>
+	    button {
+	  		padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #007bff;
+            cursor: pointer;
+	    }
+	    
+	    form {
+	        float: left;
+	        margin-right: 10px;
+	        border: 3px solid black;
+		    }
+	
+		#form {
+			margin: 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			float: right;
+		}
+		
+		
+		#setA {
+			flex: 1;
+			display: flex;
+			left: 30%;
+			position: absolute;
+			top: 20%;
+		}
+		
+		#setB {
+			flex: 1;
+			display: flex;
+			width: 100%;
+			left: 20%;
+			top: 30%;
+			position: absolute;
+		}
+		
+		div{
+			margin: 10px;
+		}
+		
+	  </style>
+</head>
+<body>
+	<div th:replace="common/header.html"></div>
+
+
+	<div id="setB">
+		<div>
+			<form onsubmit="event.preventDefault(); location.href='/hr/' + document.getElementById('employee-id').value;">
+				<h3 style="text-align: center;">직원 검색</h3>
+			  <label for="employee-id">직원 ID 입력 : </label>
+			  <br>
+			  <input type="text" id="employee-id" name="employee-id">
+			  <br>
+			  <button id="form" type="submit">조회</button>
+			</form>
+		</div>
+		<div>
+			<form onsubmit="event.preventDefault(); location.href='/hr/history/' + document.getElementById('employee-id1').value;">
+		 		<h3 style="text-align: center;">직원 이력 조회</h3>
+		 		<label for="employee-id1"> 조회할 직원 ID 입력 : </label>
+		 		<br>
+		 		<input type="text" id="employee-id1" name="employee-id1">
+		 		<br>
+		  		<button id="form" type="submit">조회</button>
+			</form>
+		</div>
+		<div>
+			<form onsubmit="event.preventDefault(); location.href='/hr/departments/' + document.getElementById('department-id').value;">
+				<h3 style="text-align: center;">부서 및 위치 정보 조회</h3>
+			  <label for="department-id">조회할 부서 ID 입력:</label>
+			  <br>
+			  <input type="text" id="department-id" name="department-id">
+			  <br>
+		  	  <button id="form" type="submit">조회</button>
+			</form>
+		</div>
+		<div>
+			<form onsubmit="event.preventDefault(); location.href='/job/' + document.getElementById('job-id').value;">
+				<h3 style="text-align: center;">Job 정보 검색</h3>
+			  <label for="job-id">Job ID 입력 : </label>
+  			  <br>
+			  <input type="text" id="job-id" name="job-id" >
+			  <br>
+			  <button id="form" type="submit">조회</button>
+			</form>
+		</div>
+	
+	</div>
+
+	<div id="setA">		
+		<div>
+			<button onclick="location.href='/hr/modify'">직업 급여 수정하기</button>	
+		</div>
+		<div>
+				<button onclick="location.href='/hr/employeeList'">직원 리스트보기</button>
+		</div>
+		<div>
+			<button id="api" onclick="location.href='/api/data'">대기 오염 지역별 검색</button>
+		</div>
+	</div>
+
+</body>
+
+</html>
