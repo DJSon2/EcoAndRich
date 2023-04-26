@@ -7,6 +7,11 @@
 [4. 공공 Data 사용](#open-api를-이용한-조회)      
 [5. 각 기능 구현 페이지](#각-기능-구현-페이지)      
 
+# 관련 file 이동
+* [Config file ](https://github.com/DJSon2/EcoAndRich/tree/main/eco-and-rich1/src/main/java/com/dongin/ecoandrich1/config)   
+* [Hr 관련 file ](https://github.com/DJSon2/EcoAndRich/tree/main/eco-and-rich1/src/main/java/com/dongin/ecoandrich1/hr)      
+* [공공 Data 요청 file](https://github.com/DJSon2/EcoAndRich/tree/main/eco-and-rich1/src/main/java/com/dongin/ecoandrich1/publicApi)     
+
 ## 개발 환경
 > * Language : Java(SpringFramework 사용)     
 > * DB : MySql      
@@ -39,21 +44,27 @@
 # 각 기능 구현 페이지
 
 ## Main 화면
+[메인 html 파일](https://github.com/DJSon2/EcoAndRich/blob/main/eco-and-rich1/src/main/resources/templates/main/main.html)
 ![main화면](https://user-images.githubusercontent.com/124123956/234359025-f4638e58-a314-445c-8b42-763a5d33b77a.png)
 
 ## 직원 리스트 조회
+[list.html](https://github.com/DJSon2/EcoAndRich/blob/main/eco-and-rich1/src/main/resources/templates/hr/list.html)   
 ![image](https://user-images.githubusercontent.com/124123956/234363770-5146412f-03f8-4303-8679-b91767cda72e.png)
 
 ## 특정 직원 정보 조회
+[one.html](https://github.com/DJSon2/EcoAndRich/blob/main/eco-and-rich1/src/main/resources/templates/hr/one.html)
 ![image](https://user-images.githubusercontent.com/124123956/234367865-d512c451-eec7-4ef7-91b0-bf2a77f90523.png)
 
 ## 특정 직원 이력 조회
+[employeeHistory.html](https://github.com/DJSon2/EcoAndRich/blob/main/eco-and-rich1/src/main/resources/templates/hr/employeeHistory.html)
  ![image](https://user-images.githubusercontent.com/124123956/234364042-67f975e2-f0fc-4cb4-b109-0f135ec76448.png)
  
 ## 부서 및 위치 정보 조회
+[departments.html](https://github.com/DJSon2/EcoAndRich/blob/main/eco-and-rich1/src/main/resources/templates/hr/departments.html)
 ![image](https://user-images.githubusercontent.com/124123956/234364146-412bc534-786f-4052-acff-15c395b041cf.png)
 
-## 특정 Job 검색 
+## 특정 Job  검색 
+[job.html](https://github.com/DJSon2/EcoAndRich/blob/main/eco-and-rich1/src/main/resources/templates/hr/job.html)
 ![image](https://user-images.githubusercontent.com/124123956/234367654-b50615ba-356b-4929-bb98-bdd2b2221ffd.png)
  
  
