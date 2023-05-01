@@ -30,7 +30,7 @@ public class PublicDataApiController {
 	    urlBuilder.append("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*페이지번호(조회 날짜로 검색 시 사용 안함)*/
 	    urlBuilder.append("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("100", "UTF-8")); /*한 페이지 결과 수(조회 날짜로 검색 시 사용 안함)*/
 	    urlBuilder.append("&" + URLEncoder.encode("returnType","UTF-8") + "=" + URLEncoder.encode("json", "UTF-8")); /*xml 또는 json*/
-	    urlBuilder.append("&" + URLEncoder.encode("serviceKey","UTF-8") + "=" + "bfzIrXZ6samznW7lltLbfU8XyvtHTbku5Q9zjQZQm0%2FTSyawXf2D3O091EYgnILM%2FzSBQxhqkeYqIwwa7srQeQ%3D%3D"); /*Service Key*/
+	    urlBuilder.append("&" + URLEncoder.encode("serviceKey","UTF-8") + "=" + ""); /*Service Key*/
 	    urlBuilder.append("&" + URLEncoder.encode("ver","UTF-8") + "=" + URLEncoder.encode("1.0", "UTF-8")); /* version */
 
 	    log.info("[PublicDataApiController] urlBuilder 데이터 확인 : " + urlBuilder);
